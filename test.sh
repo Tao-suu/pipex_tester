@@ -31,7 +31,7 @@ tester_3 () {
 tester_4 () {
 	rm -f outfile/original outfile/pipex
 	< $1 $2 | $3 | $4 | $5 > outfile/pipex
-	./.pipex "$1" "$2" "$3" "$4" "$5" outfile/original
+	../pipex "$1" "$2" "$3" "$4" "$5" outfile/original
 
 	if diff outfile/pipex outfile/original > /dev/null 2>&1
 	then
